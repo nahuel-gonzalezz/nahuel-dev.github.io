@@ -319,7 +319,7 @@ function initMobileCarousel() {
             console.log('✅ Formulario encontrado, configurando...');
             
             const SERVICE_ID = "service_j0r3k2h";
-            const TEMPLATE_ID = "TU_TEMPLATE_ID_AQUI";
+            const TEMPLATE_ID = "template_ufsgkzu";
             
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
