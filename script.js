@@ -18,7 +18,7 @@
             {
                 titulo: "Kiosco Online",
                 descripcion: "Tienda virtual para kiosco con catálogo de productos y pedidos por WhatsApp.",
-                imagen: "imagenes/proyectos/proyecto-1.png",
+                imagen: "Imagenes/proyectos/proyecto-1.png",
                 tecnologias: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
                 linkDemo: "#",
                 linkRepo: "#"
@@ -26,7 +26,7 @@
             {
                 titulo: "NoteManager",
                 descripcion: "Aplicación de notas con autenticación, categorías y etiquetas.",
-                imagen: "imagenes/proyectos/proyecto-2.png",
+                imagen: "Imagenes/proyectos/proyecto-2.png",
                 tecnologias: ["React", "Node.js", "MongoDB", "Express"],
                 linkDemo: "#",
                 linkRepo: "#"
@@ -34,7 +34,7 @@
             {
                 titulo: "PizzaHot Landing",
                 descripcion: "Landing page moderna para pizzería con menú interactivo.",
-                imagen: "imagenes/proyectos/proyecto-3.png",
+                imagen: "Imagenes/proyectos/proyecto-3.png",
                 tecnologias: ["HTML5", "CSS3", "JavaScript", "API Google Maps"],
                 linkDemo: "#",
                 linkRepo: "#"
