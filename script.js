@@ -14,32 +14,48 @@
         }
         
         // DATOS DE PROYECTOS
-        const proyectos = [
-            {
-                titulo: "Kiosco Online",
-                descripcion: "Tienda virtual para kiosco con catálogo de productos y pedidos por WhatsApp.",
-                imagen: "Imagenes/proyectos/proyecto-1.png",
-                tecnologias: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
-                linkDemo: "#",
-                linkRepo: "#"
-            },
-            {
-                titulo: "NoteManager",
-                descripcion: "Aplicación de notas con autenticación, categorías y etiquetas.",
-                imagen: "Imagenes/proyectos/proyecto-2.png",
-                tecnologias: ["React", "Node.js", "MongoDB", "Express"],
-                linkDemo: "#",
-                linkRepo: "#"
-            },
-            {
-                titulo: "PizzaHot Landing",
-                descripcion: "Landing page moderna para pizzería con menú interactivo.",
-                imagen: "Imagenes/proyectos/proyecto-3.png",
-                tecnologias: ["HTML5", "CSS3", "JavaScript", "API Google Maps"],
-                linkDemo: "#",
-                linkRepo: "#"
-            }
-        ];
+     const proyectos = [
+    {
+        titulo: "Boedo Salud - Sitio Oficial",
+        descripcion: "Sitio web oficial para prepaga del sector salud. Plataforma moderna, responsive e intuitiva que presenta planes, beneficios, cartilla médica y contacto. Diseñada para transmitir confianza y profesionalismo, reflejando casi 20 años de trayectoria.",
+        imagen: "imagenes/proyectos/proyecto-1.png",
+        tecnologias: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UX/UI"],
+        linkDemo: "#",
+        linkRepo: "#"
+    },
+    {
+        titulo: "Fenix Solutions - Sitio Corporativo",
+        descripcion: "Sitio web profesional para empresa de telecomunicaciones con más de 15 años de trayectoria. Presenta servicios tecnológicos de forma estructurada, con enfoque en generación de confianza y consultas comerciales.",
+        imagen: "imagenes/proyectos/proyecto-2.png",
+        tecnologias: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UX/UI"],
+        linkDemo: "#",
+        linkRepo: "#"
+    },
+    {
+        titulo: "Clínica Boedo - CMS Personalizable",
+        descripcion: "Sistema tipo Google Sites pero exclusivo para Clínica Boedo. Permite editar contenido, secciones, novedades y servicios médicos de forma sencilla sin necesidad de conocimientos técnicos. Totalmente personalizable para que el cliente gestione su propio sitio.",
+        imagen: "imagenes/proyectos/proyecto-3.png",
+        tecnologias: ["JavaScript", "PHP", "MySQL", "CMS Propio", "Frontend Modular"],
+        linkDemo: "#",
+        linkRepo: "#"
+    },
+    {
+        titulo: "Clínica Boedo - Sitio Oficial",
+        descripcion: "Rediseño completo del sitio web de Clínica Boedo. Transformación de sitio desactualizado a plataforma profesional con enfoque mobile-first, optimización de tiempos de carga, mejora de experiencia de usuario y organización clara de información médica y contacto.",
+        imagen: "imagenes/proyectos/proyecto-4.png",
+        tecnologias: ["HTML5", "CSS3", "JavaScript", "PHP", "Mobile First"],
+        linkDemo: "#",
+        linkRepo: "#"
+    },
+    {
+        titulo: "Gonzagapalooza - Festival Web",
+        descripcion: "Sitio web oficial del festival con sistema de compra de entradas integrado. Incluye análisis de tráfico con Google Analytics y sistema para que familias suban fotos y videos utilizando Firebase. Sitio responsive con excelente feedback de la comunidad.",
+        imagen: "imagenes/proyectos/proyecto-5.png",
+        tecnologias: ["Google Sites", "Firebase", "Google Analytics", "HTML5", "CSS3"],
+        linkDemo: "#",
+        linkRepo: "#"
+    }
+];
 
         console.log('✅ Proyectos cargados:', proyectos.length);
         
