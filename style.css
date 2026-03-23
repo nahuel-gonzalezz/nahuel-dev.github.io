@@ -1388,7 +1388,7 @@ h1{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0;
+    padding: 120px 0 120px 0;
 }
 
 .columna-texto {
@@ -1614,14 +1614,14 @@ h1{
 
 .ng-contact-mascot-img {
     position: absolute;
-    bottom: -70px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
-    width: 900px;
+    width: 700px;
     max-width: none;
     height: auto;
     display: block;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
 }
 
 @media (max-width: 900px) {
