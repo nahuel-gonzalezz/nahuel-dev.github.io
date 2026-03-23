@@ -2,21 +2,19 @@
 (function() {
     'use strict';
     
-    // ===== FUNCIÓN PARA PRECARGAR IMÁGENES =====
+
     async function preloadAllImages() {
         return new Promise((resolve) => {
-            // Recopilar todas las imágenes del sitio
             const allImages = [];
             
-            // Buscar todas las etiquetas img existentes
+
             const existingImages = document.querySelectorAll('img');
             existingImages.forEach(img => {
                 if (img.src && !img.src.includes('data:image')) {
                     allImages.push(img.src);
                 }
             });
-            
-            // También buscar imágenes en CSS (background-images)
+
             const elementsWithBg = document.querySelectorAll('[style*="background-image"]');
             elementsWithBg.forEach(el => {
                 const bgStyle = el.style.backgroundImage;
@@ -26,7 +24,6 @@
                 }
             });
             
-            // Eliminar duplicados
             const uniqueImages = [...new Set(allImages)];
             
             console.log(`📸 Precargando ${uniqueImages.length} imágenes...`);
@@ -39,7 +36,7 @@
             let loadedCount = 0;
             const totalImages = uniqueImages.length;
             
-            // Precargar cada imagen
+
             uniqueImages.forEach(src => {
                 const img = new Image();
                 
