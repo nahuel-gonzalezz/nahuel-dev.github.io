@@ -628,7 +628,7 @@ body {
     justify-content: flex-start;
     min-height: 400px;
     padding: 25px;
-    background-image: url('Imagenes/servicios.png');
+    background-image: url('imagenes/servicios.png');
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -1457,9 +1457,184 @@ h1{
     .columna-texto h1 {
         font-size: 2rem;
     }
+}
+
+/* ===== CARRUSEL MÓVIL - CORREGIDO CON ALTURA ADECUADA ===== */
+.mobile-carousel {
+    display: none;
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    background: #f8f8f8;
+    position: relative;
+}
+
+/* Altura fija para el carrusel en móvil - NO demasiado alto */
+.carousel-container {
+    height: 380px;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.carousel-slide img {
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 20px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f16322;
+    border: 2px solid white;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 20;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.carousel-btn:hover {
+    background: #d1521a;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.prev-btn {
+    left: 8px;
+}
+
+.next-btn {
+    right: 8px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dot.active {
+    background: #f16322;
+    transform: scale(1.2);
+    box-shadow: 0 0 6px rgba(241,99,34,0.5);
+}
+
+.desktop-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustes para diferentes tamaños de móvil */
+@media screen and (max-width: 768px) {
+    .desktop-image {
+        display: none !important;
+    }
     
-    .columna-visual img {
-        max-width: 90%;
+    .mobile-carousel {
+        display: block !important;
+        max-width: 300px;
+    }
+    
+    .carousel-container {
+        height: 340px;
+    }
+    
+    .columna-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+    }
+    
+    .carousel-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mobile-carousel {
+        max-width: 280px;
+    }
+    
+    .carousel-container {
+        height: 300px;
+    }
+    
+    .carousel-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .prev-btn {
+        left: 5px;
+    }
+    
+    .next-btn {
+        right: 5px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .mobile-carousel {
+        max-width: 260px;
+    }
+    
+    .carousel-container {
+        height: 280px;
     }
 }
 
@@ -2026,140 +2201,6 @@ h1{
     transform: rotate(-125deg);
 }
 
-/* CARRUSEL MÓVIL */
-
-.mobile-carousel {
-    display: none;
-    position: relative;
-    width: 100%;
-    max-width: 380px;
-    margin: 0 auto;
-}
-
-.carousel-container {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 30px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    background: #f8f8f8;
-    aspect-ratio: 1/1;
-}
-
-.carousel-track {
-    display: flex;
-    height: 100%;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.carousel-slide {
-    flex: 0 0 100%;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    background: #ffffff;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: #f16322;
-    border: 2px solid white;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-    z-index: 20;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.carousel-btn:hover {
-    background: #d1521a;
-    transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-btn:active {
-    transform: translateY(-50%) scale(0.95);
-}
-
-.prev-btn {
-    left: -5px;
-}
-
-.next-btn {
-    right: -5px;
-}
-
-.carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #ccc;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.dot.active {
-    background: #f16322;
-    transform: scale(1.3);
-    box-shadow: 0 0 8px rgba(241,99,34,0.5);
-}
-
-.desktop-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-@media screen and (max-width: 768px) {
-    .desktop-image {
-        display: none !important;
-    }
-    
-    .mobile-carousel {
-        display: block !important;
-    }
-    
-    .columna-visual {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px 0;
-        width: 100%;
-    }
-    
-    .carousel-btn {
-        width: 38px;
-        height: 38px;
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .mobile-carousel {
-        max-width: 300px;
-    }
-    
-    .carousel-btn {
-        width: 34px;
-        height: 34px;
-    }
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -2623,7 +2664,7 @@ body {
 }
 
 
-/* ===== PANTALLA DE CARGA - CON ONDA ESTILIZADA ===== */
+/* ===== PANTALLA DE CARGA ===== */
 .loader-screen {
     position: fixed;
     top: 0;
@@ -2637,32 +2678,6 @@ body {
     z-index: 10000;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(0);
-}
-
-/* Onda decorativa en la parte inferior */
-.loader-screen .wave-decoration {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    pointer-events: none;
-}
-
-.loader-screen .wave-decoration svg {
-    display: block;
-    width: 100%;
-    height: auto;
-    animation: waveFloat 3s ease-in-out infinite;
-}
-
-@keyframes waveFloat {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
 }
 
 .loader-screen.slide-down {
